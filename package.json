@@ -14,7 +14,7 @@
     "sample:validate_json_schema": "node ./bin/zod_typing.js validate_json_schema -d . -v ./examples/sample/type.d.js",
     "sample:generate_json_schema": "node ./bin/zod_typing.js generate_json_schema ./examples/sample/type.d.js ToolInvocation",
     "sample:read_file": "node ./bin/zod_typing.js read_file ./examples/sample/type.d.js ./examples/sample/initial_truth.dataset_response.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run sample:validate_json_schema && npm run sample:generate_json_schema && npm run sample:read_file"
   },
   "keywords": [],
   "author": "",
