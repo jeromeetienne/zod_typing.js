@@ -1,0 +1,29 @@
+{
+  "name": "zod_typing",
+  "version": "1.0.0",
+  "description": "Nice way to handle strict typing in JS.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "zod_typing": "bin/zod_typing.js"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "sample:validate_json_schema": "node ./bin/zod_typing.js validate_json_schema -d . -v ./examples/sample/type.d.js",
+    "sample:generate_json_schema": "node ./bin/zod_typing.js generate_json_schema ./examples/sample/type.d.js ToolInvocation",
+    "sample:read_file": "node ./bin/zod_typing.js read_file ./examples/sample/type.d.js ./examples/sample/initial_truth.dataset_response.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^2.0.3",
+    "commander": "^11.1.0",
+    "jsonc-parser": "^3.2.0",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.21.4"
+  }
+}

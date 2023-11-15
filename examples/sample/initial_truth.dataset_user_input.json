@@ -1,0 +1,59 @@
+{
+	"datasetName": "initial_truth",
+	"userInputs": [
+		{
+			"userInput": "Give me 10 product ids."
+		},
+		{
+			"userInput": "give me 10 products sorted by price"
+		},
+		{
+			"userInput": "find me some jackets"
+		},
+		{
+			"userInput": "give me 4 products related to jackets"
+		},
+		{
+			"userInput": "what is the least expensive product"
+		},
+		{
+			"userInput": "give me 4 products with the highest discount"
+		},
+		{
+			"userInput": "give me products between 300 and 1000"
+		},
+		{
+			"userInput": "list 8 products size m"
+		},
+		{
+			"userInput": "count all products size S or M"
+		},
+		{
+			"userInput": "list all products blue or red"
+		},
+		{
+			"userInput": "list 4 products not blue"
+		},
+		{
+			"userInput": "list 4 blue products"
+		},
+		{
+			"userInput": "give me 4 products in stocks"
+		},
+		{
+			"userInput": "How many shorts do you have in stock"
+		},
+		{
+			"userInput": "What the average price for shorts?"
+		},
+		{
+			"userInput": "give me the total weigth of all blue products"
+		},
+		{
+			"userInput": "List all distincts colors of jackets"
+		},
+		{
+			"userInput": "List all distincts vendors"
+		}
+	]
+}
