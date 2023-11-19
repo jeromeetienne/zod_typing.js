@@ -51,9 +51,9 @@ async function mainAsync() {
 				const allFilesValid = await ZodTypingHelper.validateFilesByJsonSchema(myZodTyping, options.rootFolder, options.verbose)
 
 				if (allFilesValid === true) {
-					console.log(`${CliColor.green('OK')} all files are valid`)
+					console.log(`${CliColor.green('✓')} all files are valid`)
 				} else {
-					console.log(`${CliColor.green('Failed')} Some files are invalid`)
+					console.log(`${CliColor.red('✘')} Some files are invalid`)
 				}
 			}
 		});

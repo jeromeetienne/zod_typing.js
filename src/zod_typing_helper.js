@@ -33,9 +33,9 @@ export default class ZodTypingHelper {
 
 			if (verbose) {
 				if (allFilesAreValid === true) {
-					console.log(`${CliColor.green('OK')} all files '${CliColor.bold(fileExtention)}' are valid`)
+					console.log(`${CliColor.green('✓')} all files '${CliColor.bold(fileExtention)}' are valid`)
 				} else {
-					console.log(`${CliColor.red('Failed')} Some files '${CliColor.bold(fileExtention)}' are invalid`)
+					console.log(`${CliColor.red('✘')} Some files '${CliColor.bold(fileExtention)}' are invalid`)
 				}
 			}
 		}
@@ -68,14 +68,14 @@ export default class ZodTypingHelper {
 			const parseResult = zodSchema.safeParse(fileContentJson)
 			if (parseResult.success) {
 				if (verbose === true) {
-					console.log(`${CliColor.green('OK')} valid ${relativeFileName}`)
+					console.log(`${CliColor.green('✓')} valid ${relativeFileName}`)
 				}
 			} else {
 				errorCount++
 				if (verbose === true) {
-					console.log(`${CliColor.red('Failed')} invalid ${relativeFileName}`)
+					console.log(`${CliColor.red('✘')} invalid ${relativeFileName}`)
 				}
-				console.log(parseResult.error)
+				// console.log(parseResult.error)
 			}
 		}
 
