@@ -54,6 +54,7 @@ async function mainAsync() {
 					console.log(`${CliColor.green('✓')} all files are valid`)
 				} else {
 					console.log(`${CliColor.red('✘')} Some files are invalid`)
+					process.exit(1)
 				}
 			}
 		});
