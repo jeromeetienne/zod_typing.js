@@ -3,6 +3,7 @@ import Zod from 'zod';
 
 // local imports 
 import { ZodTypingBase, ZodTypingType } from '../../src/zod_typing_base.js';
+import ZodTypingIo from '../../src/zod_typing_io.js';
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -70,6 +71,7 @@ class ZodTyping extends ZodTypingBase {
         ]
 }
 export const myZodTyping = new ZodTyping()
+export const myZodTypingIo = new ZodTypingIo(myZodTyping)
 
 
 ///////////////////////////////////////////////////////////////////////////////

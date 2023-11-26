@@ -1,6 +1,8 @@
 # Zod_typing.js
 Nice way to handle strict typing in JS.
 
+**TODO** to rename zod_file.js
+
 **Principle**: "Single definition to handle all use-cases"
 
 ## Use Cases
