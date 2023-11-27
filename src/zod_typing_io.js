@@ -31,11 +31,15 @@ export default class ZodTypingIo {
 		}
 
 		const fileContent = await Fs.promises.readFile(fileName, 'utf8')
+
+		// check if the content is valid according to the zod schema
 		const untypedContent = JSON.parse(fileContent)
 		const parseResult = zodType.zodSchema.safeParse(untypedContent)
 		if( parseResult.success === false ) {
 			throw new Error(`Error parsing ${fileName} : ${parseResult.error}`)
 		}
+
+		// if valid, return the content (NOTE i return the untyped content, not the parseResult.parsed)
 		return untypedContent
 	}
 
@@ -56,13 +60,14 @@ export default class ZodTypingIo {
 		if (zodType === undefined) {
 			throw new Error(`no zodType found for ${fileName}`)
 		}
-
+		// check if the content is valid according to the zod schema
 		const untypedContent = JSON.parse(fileContent)
 		const parseResult = zodType.zodSchema.safeParse(untypedContent)
 		if( parseResult.success === false ) {
 			throw new Error(`Error parsing ${fileName} : ${parseResult.error}`)
 		}
 
+		// if valid, write the file
 		await Fs.promises.writeFile(fileName, fileContent, 'utf8')
 	}
 }
